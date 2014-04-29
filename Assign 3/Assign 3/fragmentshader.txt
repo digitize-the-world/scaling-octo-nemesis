@@ -1,0 +1,96 @@
+varying vec3 N;
+varying vec3 v;    
+
+uniform sampler2D color_texture;
+uniform int procFlag;
+ 
+out vec4 colorOut;
+
+void main (void)  
+{ 
+   	vec3 lightDirection = normalize(gl_LightSource[0].position.xyz - v);
+   	vec3 viewDirection = normalize(-v);
+   	vec3 perfectReflector = normalize(-reflect(lightDirection, N));
+	vec4 surfaceColor;
+
+	// each procflag value indicates a specific lighting process
+	// this way we can accomplish all lighting goals with one compiled fragment shader
+
+   if (procFlag == 0)
+   {
+  	float scaleModS = 4.0;
+   	float scaleModT = 3.0;
+
+   	//Ross: V is the view direction vector and we are in Eye Coordinates, so EyePos is (0,0,0)  
+
+   	vec4 transformedTex = gl_TextureMatrix[0] * gl_TexCoord[0];
+   	float sampleS = mod(transformedTex.x, 1.0) * scaleModS - 0.5;
+   	float sampleT = mod(transformedTex.y, 1.0) * scaleModT;
+   	if (sampleT < 1.0)
+		sampleT = 0.0;
+	   if (sampleT > 2.0)
+		sampleT = 0.0;
+	   if (mod(sampleS, 2.0) > 1.0)
+		sampleS = 0.0;
+	   if (sampleS > 2.0)
+		sampleS = 1.0 - sampleS;
+ 
+	   surfaceColor = texture2D(color_texture, vec2(sampleS, sampleT));
+   }
+   else if (procFlag == 1)
+   {
+		// generate striped texture here
+		float stripeSpacing = 40.0 * gl_TexCoord[0].s;
+		if (mod(stripeSpacing, 5) > 2.5)
+			surfaceColor = vec4(1.0, 0.0, 0.0, 1.0);
+		else
+			surfaceColor = vec4(1.0, 1.0, 1.0, 1.0);
+   }
+   else if (procFlag == 2)
+   {
+		// generate checkerBoard texture here
+		float stripeSpacingS = 40.0 * gl_TexCoord[0].s;
+		float stripeSpacingT = 40.0 * gl_TexCoord[0].t;
+		if (mod(stripeSpacingS, 10) > 5)
+		{
+			if (mod(stripeSpacingT, 10) > 5)
+				surfaceColor = vec4(0.0, 0.0, 0.0, 1.0);
+			else
+				surfaceColor = vec4(1.0, 1.0, 1.0, 1.0);
+		}
+		else
+		{
+			if (mod(stripeSpacingT, 10) > 5)
+				surfaceColor = vec4(1.0, 1.0, 1.0, 1.0);
+			else
+				surfaceColor = vec4(0.0, 0.0, 0.0, 1.0);
+		}
+   }
+   else if (procFlag == 3)
+   {
+		vec4 transformedTex = gl_TextureMatrix[0] * gl_TexCoord[0];
+ 
+	    surfaceColor = texture2D(color_texture, gl_TexCoord[0].st);
+	    surfaceColor.a = 0.25;
+   }
+   else if (procFlag == 4)
+		surfaceColor = vec4(1.0, 1.0, 1.0, 1.0);
+
+   //calculate Ambient Term:  
+   vec4 amb = gl_LightSource[0].ambient * gl_FrontMaterial.ambient;
+
+   //(max(0, L dot N)) * Light diff * mat diff
+   //calculate Diffuse Term:
+   vec4 diffuse = max(0.0, dot(N, lightDirection)) * gl_LightSource[0].diffuse * gl_FrontMaterial.diffuse;
+   diffuse = clamp(diffuse, 0.0, 1.0);   
+
+
+   // (max(0, V * R)) * light spec * mat spec
+   //calculate Specular Term:
+   vec4 spec = pow(max(dot(viewDirection, perfectReflector), 0.0), gl_FrontMaterial.shininess) * gl_LightSource[0].specular * gl_FrontMaterial.specular;
+   spec = clamp(spec, 0.0, 1.0);
+   
+   // write Total Color:  
+   colorOut = (amb + diffuse) * surfaceColor.rgba + spec;
+
+}

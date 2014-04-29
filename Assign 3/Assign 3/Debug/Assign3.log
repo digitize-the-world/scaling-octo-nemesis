@@ -1,0 +1,50 @@
+﻿Build started 11/5/2013 6:33:33 PM.
+     1>Project "G:\Classwork\CSE 470 Work\Assignment #3\Assign3\Assign3\Assign3.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\Assign3.unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Icwc\include /Iglew\include /Ifreeglut\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /FR"Debug\\" /Gd /TP /analyze- /errorReport:prompt Camera.cpp ProgLogic.cpp main.cpp
+         main.cpp
+     1>g:\classwork\cse 470 work\assignment #3\assign3\assign3\main.cpp(20): warning C4305: 'initializing' : truncation from 'double' to 'GLfloat'
+     1>g:\classwork\cse 470 work\assignment #3\assign3\assign3\main.cpp(134): warning C4305: 'argument' : truncation from 'double' to 'GLclampf'
+     1>g:\classwork\cse 470 work\assignment #3\assign3\assign3\main.cpp(156): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
+         ProgLogic.cpp
+     1>g:\classwork\cse 470 work\assignment #3\assign3\assign3\proglogic.cpp(21): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>g:\classwork\cse 470 work\assignment #3\assign3\assign3\proglogic.cpp(79): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>g:\classwork\cse 470 work\assignment #3\assign3\assign3\proglogic.cpp(108): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+         Camera.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\Classwork\CSE 470 Work\Assignment #3\Assign3\Debug\Assign3.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\Classwork\CSE 470 Work\Assignment #3\Assign3\Debug\Assign3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\Classwork\CSE 470 Work\Assignment #3\Assign3\Debug\Assign3.lib" /MACHINE:X86 Debug\Camera.obj
+         Debug\HModel.obj
+         Debug\main.obj
+         Debug\Mesh.obj
+         Debug\Point.obj
+         Debug\ProgLogic.obj
+     1>main.obj : error LNK2019: unresolved external symbol __imp__glutInit@8 referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol __imp__glutInitWindowPosition@8 referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol __imp__glutInitWindowSize@8 referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol __imp__glutInitDisplayMode@4 referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol __imp__glutMainLoop@0 referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol __imp__glutCreateWindow@4 referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol __imp__glutPostRedisplay@0 referenced in function "void __cdecl idle(void)" (?idle@@YAXXZ)
+     1>main.obj : error LNK2019: unresolved external symbol __imp__glutSwapBuffers@0 referenced in function "void __cdecl display(void)" (?display@@YAXXZ)
+     1>main.obj : error LNK2019: unresolved external symbol __imp__glutCreateMenu@4 referenced in function "void __cdecl init(void)" (?init@@YAXXZ)
+     1>main.obj : error LNK2019: unresolved external symbol __imp__glutSetMenu@4 referenced in function "void __cdecl init(void)" (?init@@YAXXZ)
+     1>main.obj : error LNK2019: unresolved external symbol __imp__glutAddMenuEntry@8 referenced in function "void __cdecl init(void)" (?init@@YAXXZ)
+     1>main.obj : error LNK2019: unresolved external symbol __imp__glutAddSubMenu@8 referenced in function "void __cdecl init(void)" (?init@@YAXXZ)
+     1>main.obj : error LNK2019: unresolved external symbol __imp__glutAttachMenu@4 referenced in function "void __cdecl init(void)" (?init@@YAXXZ)
+     1>main.obj : error LNK2019: unresolved external symbol __imp__glutIdleFunc@4 referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol __imp__glutKeyboardFunc@4 referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol __imp__glutSpecialFunc@4 referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol __imp__glutReshapeFunc@4 referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol __imp__glutDisplayFunc@4 referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol __imp__glutKeyboardUpFunc@4 referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol __imp__glutSpecialUpFunc@4 referenced in function _main
+     1>ProgLogic.obj : error LNK2019: unresolved external symbol __imp__glutGet@4 referenced in function "public: void __thiscall ProgLogic::InitDog(void)" (?InitDog@ProgLogic@@QAEXXZ)
+     1>G:\Classwork\CSE 470 Work\Assignment #3\Assign3\Debug\Assign3.exe : fatal error LNK1120: 21 unresolved externals
+     1>Done Building Project "G:\Classwork\CSE 470 Work\Assignment #3\Assign3\Assign3\Assign3.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:02.36

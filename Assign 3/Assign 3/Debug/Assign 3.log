@@ -1,0 +1,18 @@
+﻿Build started 11/11/2013 10:25:59 PM.
+     1>Project "G:\Classwork\CSE 470 Work\Assignment #3\Assign 3\Assign 3\Assign 3.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\Assign 3.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+         Assign 3.vcxproj -> G:\Classwork\CSE 470 Work\Assignment #3\Assign 3\Debug\Assign 3.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\Assign 3.unsuccessfulbuild".
+         Touching "Debug\Assign 3.lastbuildstate".
+     1>Done Building Project "G:\Classwork\CSE 470 Work\Assignment #3\Assign 3\Assign 3\Assign 3.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.04

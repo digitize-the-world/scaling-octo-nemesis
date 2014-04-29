@@ -1,0 +1,53 @@
+﻿Build started 4/28/2014 6:20:52 PM.
+     1>Project "G:\Classwork\CSE 470 Work\Assignment #3\Assign 3\Assign 3\Assign 3.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Release\Assign 3.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+         All outputs are up-to-date.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\Classwork\CSE 470 Work\Assignment #3\Assign 3\Release\Assign 3.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\Classwork\CSE 470 Work\Assignment #3\Assign 3\Release\Assign 3.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\Classwork\CSE 470 Work\Assignment #3\Assign 3\Release\Assign 3.lib" /MACHINE:X86 /SAFESEH Release\Camera.obj
+         Release\glApplication.obj
+         Release\glsl.obj
+         Release\glutwindow.obj
+         Release\glWindow.obj
+         Release\freeglut_callbacks.obj
+         Release\freeglut_cursor.obj
+         Release\freeglut_display.obj
+         Release\freeglut_ext.obj
+         Release\freeglut_font.obj
+         Release\freeglut_font_data.obj
+         Release\freeglut_gamemode.obj
+         Release\freeglut_geometry.obj
+         Release\freeglut_glutfont_definitions.obj
+         Release\freeglut_init.obj
+         Release\freeglut_joystick.obj
+         Release\freeglut_main.obj
+         Release\freeglut_menu.obj
+         Release\freeglut_misc.obj
+         Release\freeglut_overlay.obj
+         Release\freeglut_state.obj
+         Release\freeglut_stroke_mono_roman.obj
+         Release\freeglut_stroke_roman.obj
+         Release\freeglut_structure.obj
+         Release\freeglut_teapot.obj
+         Release\freeglut_videoresize.obj
+         Release\freeglut_window.obj
+         Release\glew.obj
+         Release\HModel.obj
+         Release\main.obj
+         Release\Mesh.obj
+         Release\Point.obj
+         Release\ProgLogic.obj
+         Release\stb_image.obj
+         Generating code
+         Finished generating code
+         Assign 3.vcxproj -> G:\Classwork\CSE 470 Work\Assignment #3\Assign 3\Release\Assign 3.exe
+       FinalizeBuildStatus:
+         Deleting file "Release\Assign 3.unsuccessfulbuild".
+         Touching "Release\Assign 3.lastbuildstate".
+     1>Done Building Project "G:\Classwork\CSE 470 Work\Assignment #3\Assign 3\Assign 3\Assign 3.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.80

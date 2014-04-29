@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AA23A2E6-DF06-4B96-9806-53975224E05E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Assign3</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;FREEGLUT_STATIC;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>cwc/include;glew/include;freeglut/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;FREEGLUT_STATIC;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>glew\include;freeglut\include;cwc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="cwc\source\glApplication.cpp" />
+    <ClCompile Include="cwc\source\glsl.cpp" />
+    <ClCompile Include="cwc\source\glutwindow.cpp" />
+    <ClCompile Include="cwc\source\glWindow.cpp" />
+    <ClCompile Include="freeglut\source\freeglut_callbacks.c" />
+    <ClCompile Include="freeglut\source\freeglut_cursor.c" />
+    <ClCompile Include="freeglut\source\freeglut_display.c" />
+    <ClCompile Include="freeglut\source\freeglut_ext.c" />
+    <ClCompile Include="freeglut\source\freeglut_font.c" />
+    <ClCompile Include="freeglut\source\freeglut_font_data.c" />
+    <ClCompile Include="freeglut\source\freeglut_gamemode.c" />
+    <ClCompile Include="freeglut\source\freeglut_geometry.c" />
+    <ClCompile Include="freeglut\source\freeglut_glutfont_definitions.c" />
+    <ClCompile Include="freeglut\source\freeglut_init.c" />
+    <ClCompile Include="freeglut\source\freeglut_joystick.c" />
+    <ClCompile Include="freeglut\source\freeglut_main.c" />
+    <ClCompile Include="freeglut\source\freeglut_menu.c" />
+    <ClCompile Include="freeglut\source\freeglut_misc.c" />
+    <ClCompile Include="freeglut\source\freeglut_overlay.c" />
+    <ClCompile Include="freeglut\source\freeglut_state.c" />
+    <ClCompile Include="freeglut\source\freeglut_stroke_mono_roman.c" />
+    <ClCompile Include="freeglut\source\freeglut_stroke_roman.c" />
+    <ClCompile Include="freeglut\source\freeglut_structure.c" />
+    <ClCompile Include="freeglut\source\freeglut_teapot.c" />
+    <ClCompile Include="freeglut\source\freeglut_videoresize.c" />
+    <ClCompile Include="freeglut\source\freeglut_window.c" />
+    <ClCompile Include="glew\source\glew.c" />
+    <ClCompile Include="HModel.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="Point.cpp" />
+    <ClCompile Include="ProgLogic.cpp" />
+    <ClCompile Include="stb_image.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="cwc\include\glApplication.h" />
+    <ClInclude Include="cwc\include\glsl.h" />
+    <ClInclude Include="cwc\include\glutwindow.h" />
+    <ClInclude Include="cwc\include\glWindow.h" />
+    <ClInclude Include="freeglut\include\GL\freeglut.h" />
+    <ClInclude Include="freeglut\include\GL\freeglut_ext.h" />
+    <ClInclude Include="freeglut\include\GL\freeglut_std.h" />
+    <ClInclude Include="freeglut\include\GL\glut.h" />
+    <ClInclude Include="freeglut\source\freeglut_internal.h" />
+    <ClInclude Include="freeglut\source\freeglut_teapot_data.h" />
+    <ClInclude Include="glew\include\GL\glew.h" />
+    <ClInclude Include="glew\include\GL\glxew.h" />
+    <ClInclude Include="glew\include\GL\wglew.h" />
+    <ClInclude Include="HModel.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="Point.h" />
+    <ClInclude Include="ProgLogic.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="freeglut\source\freeglutdll.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="fragmentshader.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,7 @@
+a) k, l - spin object left and right
+a, s - move camera up/down
+arrow keys - move camera around the scene
+1 - choose scene 1
+2 - choose scene 2
+
+b) Implemented a model loading class to use in scene 2 as the "something else" to be rendered instead of the dog.
