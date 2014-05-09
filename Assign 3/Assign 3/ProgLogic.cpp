@@ -37,7 +37,7 @@ void ProgLogic::InitLogic(bool *std, bool *special)
 		cout << "Error loading, compiling or linking shader\n";
 
 	tankMesh = new Mesh();
-	tankMesh->LoadEMeshFromFile("tank.enigma");
+	tankMesh->LoadEMeshFromFile("building1.enigma");
 	tankMesh->AddTexture("metal.bmp", 1024, 1024, 3);
 
 	sceneState = 0;
@@ -81,8 +81,8 @@ void ProgLogic::UpdateLogic()
 	}
 	if (stdInput['2'] == true)
 	{
-		glEnable(GL_BLEND);
-		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+		//glEnable(GL_BLEND);
+		//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 		sceneState = 1;
 	}
 
@@ -162,7 +162,7 @@ void ProgLogic::DrawObjects()
 			GLint flag = glGetUniformLocation(shader->GetProgramObject(), "procFlag");
 			glUniform1i(flag, 1);
     
-			glutSolidTorus(0.5f, 1.0f, 10, 20);
+			//glutSolidTorus(0.5f, 1.0f, 10, 20);
 		}
 		if (shader) shader->end();
 		glPopMatrix();
@@ -172,8 +172,13 @@ void ProgLogic::DrawObjects()
 		glTranslatef(dogActor.position.x, dogActor.position.y, dogActor.position.z);
 		glRotatef(dogActor.rot, 0.0f, 1.0f, 0.0f);
 
-		glDepthMask(GL_FALSE);
+		//glDepthMask(GL_FALSE);
 		
+		glPushMatrix();
+
+		glRotatef(-90.0f, 1.0f, 0.0f, 0.0f);
+		glTranslatef(0.0f, 0.0f, -1.5f);
+
 		if (shader)
 		{
 			shader->begin();
@@ -185,6 +190,8 @@ void ProgLogic::DrawObjects()
 			tankMesh->DrawBuffered();
 		}
 		if (shader) shader->end();
+
+		glPopMatrix();
 
 		glDepthMask(GL_TRUE);
 		break;

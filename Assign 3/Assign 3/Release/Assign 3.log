@@ -1,12 +1,16 @@
-﻿Build started 4/28/2014 6:20:52 PM.
-     1>Project "G:\Classwork\CSE 470 Work\Assignment #3\Assign 3\Assign 3\Assign 3.vcxproj" on node 2 (Build target(s)).
+﻿Build started 5/9/2014 12:45:18 AM.
+     1>Project "D:\Alienware Data\Justin\Documents\GitHub\scaling-octo-nemesis\Assign 3\Assign 3\Assign 3.vcxproj" on node 2 (Build target(s)).
      1>InitializeBuildStatus:
          Creating "Release\Assign 3.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         All outputs are up-to-date.
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Iglew\include /Ifreeglut\include /Icwc\include /Zi /nologo /W3 /WX- /Od /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D FREEGLUT_STATIC /D GLEW_STATIC /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ProgLogic.cpp
+         ProgLogic.cpp
+     1>ProgLogic.cpp(21): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>ProgLogic.cpp(98): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>ProgLogic.cpp(203): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
          All outputs are up-to-date.
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\Classwork\CSE 470 Work\Assignment #3\Assign 3\Release\Assign 3.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\Classwork\CSE 470 Work\Assignment #3\Assign 3\Release\Assign 3.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\Classwork\CSE 470 Work\Assignment #3\Assign 3\Release\Assign 3.lib" /MACHINE:X86 /SAFESEH Release\Camera.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Alienware Data\Justin\Documents\GitHub\scaling-octo-nemesis\Assign 3\Release\Assign 3.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Alienware Data\Justin\Documents\GitHub\scaling-octo-nemesis\Assign 3\Release\Assign 3.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Alienware Data\Justin\Documents\GitHub\scaling-octo-nemesis\Assign 3\Release\Assign 3.lib" /MACHINE:X86 /SAFESEH Release\Camera.obj
          Release\glApplication.obj
          Release\glsl.obj
          Release\glutwindow.obj
@@ -42,12 +46,12 @@
          Release\stb_image.obj
          Generating code
          Finished generating code
-         Assign 3.vcxproj -> G:\Classwork\CSE 470 Work\Assignment #3\Assign 3\Release\Assign 3.exe
+         Assign 3.vcxproj -> D:\Alienware Data\Justin\Documents\GitHub\scaling-octo-nemesis\Assign 3\Release\Assign 3.exe
        FinalizeBuildStatus:
          Deleting file "Release\Assign 3.unsuccessfulbuild".
          Touching "Release\Assign 3.lastbuildstate".
-     1>Done Building Project "G:\Classwork\CSE 470 Work\Assignment #3\Assign 3\Assign 3\Assign 3.vcxproj" (Build target(s)).
+     1>Done Building Project "D:\Alienware Data\Justin\Documents\GitHub\scaling-octo-nemesis\Assign 3\Assign 3\Assign 3.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.80
+Time Elapsed 00:00:01.61
